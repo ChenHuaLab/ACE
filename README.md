@@ -115,7 +115,6 @@ Official data repository: [PROVEDIt Database, Rutgers University](https://lftdi.
 
 ```text
 ├── README.md               # Master English documentation
-├── README_zh.md            # Chinese documentation (中文说明)
 ├── THIRD_PARTY_NOTICES.md  # Third-party component licenses & data terms
 ├── docs/
 │   ├── USER_GUIDE.md       # Detailed software operations & troubleshooting
