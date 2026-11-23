@@ -1,0 +1,5 @@
+file,role,kit,instrument,injection_seconds,pcr_cycles,source_relative_path,bytes
+A01_Ladder-GF_01.15sec.hid,allelic ladder,GlobalFiler,ABI 3500,15,29,PROVEDIt_1-Person Profiles_3500 15sec_GF29cycles/15sec/RD14-0003(072415CMG_15sec)/A01_Ladder-GF_01.15sec.hid,914340
+B01_RD14-0003-01d2a-0.5GF-Q0.7_02.15sec.hid,single-source sample,GlobalFiler,ABI 3500,15,29,PROVEDIt_1-Person Profiles_3500 15sec_GF29cycles/15sec/RD14-0003(072415CMG_15sec)/B01_RD14-0003-01d2a-0.5GF-Q0.7_02.15sec.hid,855776
+B07_RD14-0003-02d2a-0.0625GF-Q0.8_02.15sec.hid,single-source sample,GlobalFiler,ABI 3500,15,29,PROVEDIt_1-Person Profiles_3500 15sec_GF29cycles/15sec/RD14-0003(072415CMG_15sec)/B07_RD14-0003-02d2a-0.0625GF-Q0.8_02.15sec.hid,849029
+A04_RD14-0003-01d3c-0.0078GF-Q0.8_01.15sec.hid,single-source sample,GlobalFiler,ABI 3500,15,29,PROVEDIt_1-Person Profiles_3500 15sec_GF29cycles/15sec/RD14-0003(072415CMG_15sec)/A04_RD14-0003-01d3c-0.0078GF-Q0.8_01.15sec.hid,839527
