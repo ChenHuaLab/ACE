@@ -22,6 +22,24 @@ All four records completed processing, and the multichannel profile viewer opene
 
 The interactive demonstration displayed a 2 s batch runtime. This observation covers four records, including a ladder, and excludes installation and import; it is not a hardware-independent performance claim.
 
+## Single-file launcher checks
+
+The `ACE.exe` distribution was tested on Windows on **23 November 2026**. The application is available from [Figshare](https://figshare.com/s/a3ac90e47f505f1912c1). ACE is developed in Java and C. The final launcher updates preserved the tested Java core and native library.
+
+| Check | Result |
+| --- | --- |
+| Four bundled PROVEDIt HID inputs with the packaged core | Four Success records; generated TXT files matched the earlier verified outputs byte for byte |
+| First-run program-folder selection | Passed |
+| Direct program folder and sibling default results folder | Passed; selecting `D:\ACE` corresponds to `D:\ACE` and `D:\ACE_results` |
+| Chinese characters and spaces in the selected path | Passed with the actual EXE |
+| Remember the selected folder and launch again | Passed; no repeated prompt or extraction |
+| Retain existing results on the next launch | Passed |
+| Cancel before preparation | Passed; no extraction or saved choice |
+| Invalid saved path and unavailable settings storage | Recoverable selection; application continued when settings could not be saved |
+| High-DPI folder window and embedded icon | Passed at 150% display scaling; the 720 × 466 design client area scaled to 1080 × 699 pixels |
+
+These results cover the tested inputs and launcher behavior. They do not establish complete allele recovery or validate every application function.
+
 ## Known observations
 
 - JavaFX CSS warnings about Pos.left did not prevent the demonstrated analysis.
@@ -33,3 +51,4 @@ The interactive demonstration displayed a 2 s batch runtime. This observation co
 ## Reproduce the check
 
 Use [USER_GUIDE.md](USER_GUIDE.md). Exact input files and provenance are in [manifest.csv](../examples/provedit/manifest.csv), and software-generated sample tables are in [observed-output](../examples/observed-output).
+

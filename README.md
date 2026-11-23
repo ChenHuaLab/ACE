@@ -2,7 +2,7 @@
 
 ACE is an intelligent, high-throughput signal processing and probabilistic STR genotyping platform for capillary electrophoresis (CE). It automates the complete workflow from raw **HID/FSA** files through peak detection, internal size-standard sizing, allelic ladder fitting, allele designation, and probabilistic peak curation in an interactive graphical environment.
 
-This repository provides **ACE v1.0** for Windows, an illustrated user guide, and a small demonstration dataset from the public PROVEDIt collection. Launch the application with `ACE.cmd`.
+ACE is developed in **Java and C**. The Windows application is distributed as **`ACE.exe`**, with an included Java runtime. This repository provides an illustrated user guide and a small demonstration dataset from the public PROVEDIt collection. Download the application from [Figshare](https://figshare.com/s/a3ac90e47f505f1912c1).
 
 ![ACE Multichannel Electropherogram Viewer](docs/images/profile.png)
 
@@ -24,14 +24,17 @@ This repository provides **ACE v1.0** for Windows, an illustrated user guide, an
 
 ## Download & Installation
 
-### Windows Portable Package
+### Windows Executable
 
-1. Open the repository's **Releases** page and download **`ACE-v1.0-windows.zip`** (~305 MiB).
-2. Extract the archive to any local, writable directory (e.g., `D:\test\ACE`).
-3. Open the **ACE** folder inside the extracted archive and double-click **`ACE.cmd`**.
+1. Open the [Figshare download page](https://figshare.com/s/a3ac90e47f505f1912c1) and download **`ACE.exe`** (~302 MiB).
+2. Double-click **`ACE.exe`** and choose a new or empty, writable program folder on first launch.
+3. Selecting `D:\ACE` places the program files directly in **`D:\ACE`** and sets the default results folder to **`D:\ACE_results`**.
+4. Click **Start ACE**. The first run prepares the included application and Java runtime; later launches remember the selected folder and reuse the installation.
 
 > [!NOTE]
-> The portable package includes a Java runtime (Zulu JRE 22); no separate Java installation or environment variable configuration is required. The launcher sets a 4 GiB Java heap limit and creates the local results directory automatically. Software authorization is required.
+> The executable includes the Java runtime (Zulu JRE 22), the ACE icon and a high-DPI folder-selection window. No separate Java installation or environment-variable configuration is required. Windows 64-bit and .NET Framework 4.8 are required. Allow about 1 GB of free space for the program, plus space for your results. Software authorization is required.
+
+The application sets a 4 GiB Java heap limit. Existing results are retained on subsequent launches. Project files follow the project location you choose inside ACE. See the [operating guide](docs/USER_GUIDE.md#launch) for path settings.
 
 ### ACE v1.0 loading screen
 
@@ -100,7 +103,7 @@ In the project creation dialog:
 
 ## License
 
-ACE is distributed as compiled proprietary software and requires software-owner authorization. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency notices and data terms.
+ACE is distributed as compiled proprietary software and requires software-owner authorization. Third-party components remain subject to their own licenses and copyright notices. The demonstration data terms and provenance are documented in [examples/provedit](examples/provedit).
 
 ## Data Attribution & Citation
 
@@ -115,7 +118,6 @@ Official data repository: [PROVEDIt Database, Rutgers University](https://lftdi.
 
 ```text
 ├── README.md               # Master English documentation
-├── THIRD_PARTY_NOTICES.md  # Third-party component licenses & data terms
 ├── docs/
 │   ├── USER_GUIDE.md       # Detailed software operations & troubleshooting
 │   ├── VERIFICATION.md     # Demonstration run and known observations
@@ -124,3 +126,4 @@ Official data repository: [PROVEDIt Database, Rutgers University](https://lftdi.
     ├── provedit/           # Curated PROVEDIt raw HID profiles & manifest
     └── observed-output/    # Example exported genotype tables
 ```
+

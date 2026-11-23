@@ -2,9 +2,24 @@
 
 ## Launch
 
-Extract the complete **ACE-v1.0-windows.zip** archive, open **ACE**, and double-click **ACE.cmd**. The launcher creates a local `results` folder, configures the application paths and starts the bundled Java runtime. Extract to a writable location; do not run inside the ZIP.
+ACE is developed in **Java and C**. Download **`ACE.exe`** (~302 MiB) from the [Figshare download page](https://figshare.com/s/a3ac90e47f505f1912c1).
 
-The loading page and main screen display **ACE v1.0**. The release ZIP contains the complete application and its bundled runtime.
+Double-click **`ACE.exe`** and select a new or empty, writable folder on first launch. The window displays both program and default results paths before you click **Start ACE**.
+
+| Selection | Program files | Default results |
+| --- | --- | --- |
+| `D:\ACE` | `D:\ACE` | `D:\ACE_results` |
+| Default: `%LOCALAPPDATA%\ACE` | `%LOCALAPPDATA%\ACE` | `%LOCALAPPDATA%\ACE_results` |
+
+Program files are installed directly in the selected folder. The first launch prepares the application and included Java runtime; later launches reuse the installation and remember the choice. Cancelling the folder window does not install the program or save the choice. Existing results are retained. The launcher uses the ACE icon and supports high-DPI displays.
+
+Allow about 1 GB of free space for the program, with additional space for results. The executable requires Windows 64-bit and .NET Framework 4.8; a separate Java installation is unnecessary. Keep `ACE.exe` in its download location while choosing a separate new installation folder. If a folder already contains an older nested installation or unrelated files, choose a different new folder; existing files are not moved automatically.
+
+The saved choice is stored per Windows user in `%LOCALAPPDATA%\ACE\launcher-location.txt`. To choose again, close ACE and remove this settings file, then relaunch. An unavailable saved folder also prompts for another choice.
+
+The default results folder above is separate from the project location selected in ACE. Project records and exports follow the application's project and export settings described below.
+
+The loading page and main screen display **ACE v1.0**. The executable contains the application and its bundled runtime.
 
 ![ACE welcome screen](images/home.png)
 
@@ -51,7 +66,10 @@ Use **Export** to request the application’s batch or record export. The refere
 | Startup reports authorization failure | Obtain authorization from the software owner. This package retains the existing checks. |
 | The ladder is marked Mixture | Treat it as a calibration record and exclude it from donor-sample interpretation. |
 | A Success record has a warning/blank quality symbol | Inspect its electropherogram and reported calls. Success describes processing completion. |
-| A ZIP extraction or launch fails | Extract all files, keep the bundled directory structure and use a writable folder. |
+| ACE.exe rejects the selected program folder | Choose a new or empty, writable folder, or a recognized installation made by the same launcher. |
+| ACE.exe prompts for a folder again | Reconnect the saved drive or choose a writable folder; settings are saved separately for each Windows user. |
+| ACE.exe cannot prepare or start the application | Confirm that the selected folder is writable, sufficient space is available, and .NET Framework 4.8 is installed. |
 | Local paths appear in project files | Keep the full project local or redact a copy before external sharing. |
 
 JavaFX style warnings occurred during the successful demonstration. The missing-parent-folder error was resolved by creating the parent folder.
+
